@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinguim Surf - Jogue Agora</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-color: #F4F9FF;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --primary-btn: #0EA5E9;
+            --primary-btn-hover: #0284C7;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        p.subtitle {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-btn);
+            color: #ffffff;
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(2, 132, 199, 0.5);
+        }
+
+        .disclaimer {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 3rem 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container do Vídeo Atualizado */
+        .hero-video-container {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 32px;
+            margin: 0 auto 2.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background-color: #BAE6FD;
+        }
+
+        .hero-video-container video {
+            width: 100%;
+            height: auto;
+            display: block; /* Remove margens invisíveis abaixo do vídeo */
+        }
+
+        .features {
+            background-color: #ffffff;
+            padding: 4rem 1.5rem;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.02);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .features p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 400px;
+            margin: 0 auto 2.5rem;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding: 2rem 1.5rem;
+            padding-bottom: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+        }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+            .hero { padding: 5rem 2rem 3rem; }
+            .features { padding: 6rem 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        
+        <!-- Vídeo rodando em loop e sem som -->
+        <div class="hero-video-container">
+            <video autoplay loop muted playsinline>
+                <!-- IMPORTANTE: O nome do vídeo no Github precisa ser igual a este abaixo -->
+                <source src="video-pinguim.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <h1>Até onde você consegue<br>levar o Pinguim?</h1>
+        <p class="subtitle">Uma descida rápida. Um novo desafio a cada partida.</p>
+        
+        <div>
+            <!-- Botão com Link de Afiliado -->
+            <a href="https://pinguimsurf.com/demo/?ref=PS8B8AA547" class="cta-button">Jogar Pinguim Surf</a>
+            <span class="disclaimer">18+ • Jogue com responsabilidade</span>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Fácil de começar.<br>Difícil de parar.</h2>
+        <p>Lance o pinguim, desvie dos obstáculos e tente chegar cada vez mais longe.</p>
+        
+        <!-- Botão com Link de Afiliado -->
+        <a href="https://pinguimsurf.com/demo/?ref=PS8B8AA547" class="cta-button">Jogar agora</a>
+    </section>
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Jogo responsável</a></li>
+            <li><a href="#">Suporte</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
